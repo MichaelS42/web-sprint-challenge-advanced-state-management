@@ -4,44 +4,44 @@ import { fetchAll } from './Actions';
 import {useSelector} from 'react-redux';
 import SmurfCard from './SmurfCard';
 
-export default function SmurfList(){
-    const smurfs = useSelector(state => state.smurfs);
+// export default function SmurfList(){
+//     const smurfs = useSelector(state => state.smurfs);
 
-    return (
-        <div>
-            {smurfs.map(smurf => <SmurfCard key={smurf._id} smurf={smurf} /> )}
-        </div>
-    )
-}
-
-
-
-
-
-
-
-
-
-// const SmurfList = (props) => {
-//     useEffect(() => {
-//         props.fetchAll()
-//     }, [])
-//     return(
+//     return (
 //         <div>
-//             {props.smurfs.map(smurf => (<SmurfCard smurf={smurf} />))}
+//             {smurfs.map(smurf => <SmurfCard key={smurf._id} smurf={smurf} /> )}
 //         </div>
 //     )
 // }
 
-// const mapStateToProps = (state) => {
-//     return {
-//         smurfs: state.smurfs,
-//         isFetching: state.isFetching,
-//         error: state.error
-//     }
-// }
 
-// export default connect(mapStateToProps, {fetchAll})(SmurfList)
+
+
+
+
+
+
+
+const SmurfList = (props) => {
+    useEffect(() => {
+        props.fetchAll()
+    }, [])
+    return(
+        <div>
+            {props.smurfs.map(smurf => (<SmurfCard smurf={smurf} />))}
+        </div>
+    )
+}
+
+const mapStateToProps = (state) => {
+    return {
+        smurfs: state.smurfs,
+        isFetching: state.isFetching,
+        error: state.error
+    }
+}
+
+export default connect(mapStateToProps, {fetchAll})(SmurfList)
 
 
 

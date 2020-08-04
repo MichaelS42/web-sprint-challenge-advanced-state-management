@@ -5,9 +5,9 @@ import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import './index.css';
 import App from './components/App';
-import smurfReducer from './components/Reducer/smurfReducer';
+import smurfsReducer from './components/Reducer/smurfsReducer';
 
-const store = createStore(smurfReducer, applyMiddleware(thunk));
+const store = createStore(smurfsReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,53 +1,53 @@
 import React from 'react';
 
-export default function SmurfCard({smurf}) {
-  const {name, height} = smurf;
+// export default function SmurfCard({smurf}) {
+//   const {name, height} = smurf;
 
-  return (
-    <div>
-      <p>{name}</p>
-      <p>{height}</p>
-    </div>
-  )
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const SmurfCard = (props) => {
-//     return(
-//         <div>
-//             <h2>
-//                 {props.smurfs.name}
-//             </h2>
-
-
-//             <h3>
-//                 {props.smurfs.age}
-//             </h3>
-
-
-//             <h3>
-//                 {props.smurfs.height}
-//             </h3>
-//             {/* <button onClick={fetchAll}>fetch smurf</button> */}
-//         </div>
-//     )
-
+//   return (
+//     <div>
+//       <p>{name}</p>
+//       <p>{height}</p>
+//     </div>
+//   )
 // }
 
-// export default SmurfCard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const SmurfCard = (props) => {
+    return(
+        <div>
+            <h2>
+                {props.smurf.name}
+            </h2>
+
+
+            <h3>
+                {props.smurf.age}
+            </h3>
+
+
+            <h3>
+                {props.smurf.height}
+            </h3>
+            {/* <button onClick={fetchAll}>fetch smurf</button> */}
+        </div>
+    )
+
+}
+
+export default SmurfCard
 
 
 

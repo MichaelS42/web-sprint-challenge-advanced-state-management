@@ -9,11 +9,10 @@ export const ActionTypes = {
     POST_FAIL : 'POST_FAIL'
 };
 
-export const fetchAll = () => dispatch => {
+export const fetchAll = () => (dispatch) => {
     dispatch({ type: ActionTypes.FETCH_DATA});
     axios
         .get("http://localhost:7431/smurfs")
-
         .then(res => {
             console.log("fetch success", res.data);
             dispatch({
@@ -30,7 +29,7 @@ export const fetchAll = () => dispatch => {
         })
 }
 
-export const postSmurfs = (smurf) => (dispatch) => {
+export const postSmurfs = (smurfs) => (dispatch) => {
     dispatch({type: ActionTypes.POST_DATA})
     axios
     .post("http://localhost:7431/smurfs")

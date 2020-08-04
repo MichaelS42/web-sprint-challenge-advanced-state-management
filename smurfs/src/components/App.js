@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import SmurfList from './SmurfList';
-import Smurf from './Smurf';
+import SmurfCard from './SmurfCard';
 
 function App(){
     return (
       <div className="App">
         <h1>SMURFS! 2.0 W/ Redux</h1>
         <SmurfList />
-        <Smurf />
+        <SmurfCard />
       </div>
     );
 }
